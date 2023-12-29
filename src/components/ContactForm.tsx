@@ -11,10 +11,11 @@ interface FormData {
 const ContactForm: React.FC = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
     const [status, setStatus] = useState<"initial" | "sent" | "error">("initial")
+    const [isProcessing, setIsProcessing] = useState(false)
 
     const onSubmit: SubmitHandler<FormData> = async (data) => {
         try {
-
+            setIsProcessing(true)
             const response = await fetch("https://recipe-backend-8nd7.onrender.com/api/contact", {
                 method: "POST",
                 body: JSON.stringify({ ...data }),
@@ -27,6 +28,9 @@ const ContactForm: React.FC = () => {
         } catch (err) {
             console.log(err)
             setStatus("error")
+        } finally {
+            setIsProcessing(false)
+            reset()
         }
 
     };
@@ -88,8 +92,18 @@ const ContactForm: React.FC = () => {
                         {errors.message && <p className="text-red-500  text-sm font-semibold">{errors.message.message}</p>}
                     </div>
 
-                    <button type="submit" className="mx-auto block bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-6 rounded">Submit</button>
-                    <p className={` mt-5 mb-5 font-bold text-center border py-4 rounded-md ${status==="error" && "text-red-600 border-red-600  bg-red-200" } ${status==="sent" && "text-green-600 border-green-600  bg-green-200" }`}>
+                    <button
+                        type="submit"
+                        className="mx-auto bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-6 rounded w-[150px] flex items-center justify-center "
+                    >
+                        {isProcessing ?
+                            <div className='inline-block w-5 h-5 rounded-full border-t-2 border-r-2 border-r-white border-t-white animate-spin '>
+
+                            </div> :
+                            "Submit"
+                        }
+                    </button>
+                    <p className={` mt-5 mb-5 font-bold text-center border py-4 rounded-md ${status === "error" && "text-red-600 border-red-600  bg-red-200"} ${status === "sent" && "text-green-600 border-green-600  bg-green-200"}`}>
                         {status === "sent" && "Thanks for contacting me"}
                         {status === "error" && "Something Went wrong! try again"}
                     </p>
