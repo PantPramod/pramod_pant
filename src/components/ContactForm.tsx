@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 interface FormData {
@@ -9,11 +9,26 @@ interface FormData {
 }
 
 const ContactForm: React.FC = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
+    const [status, setStatus] = useState<"initial" | "sent" | "error">("initial")
 
-    const onSubmit: SubmitHandler<FormData> = (data) => {
-        console.log(data);
-        // Handle your form submission here
+    const onSubmit: SubmitHandler<FormData> = async (data) => {
+        try {
+
+            const response = await fetch("https://recipe-backend-8nd7.onrender.com/api/contact", {
+                method: "POST",
+                body: JSON.stringify({ ...data }),
+                headers: { "Content-Type": "application/json" }
+            });
+            const res = await response.json()
+            if (res?._id) {
+                setStatus("sent")
+            }
+        } catch (err) {
+            console.log(err)
+            setStatus("error")
+        }
+
     };
 
     return (
@@ -74,6 +89,10 @@ const ContactForm: React.FC = () => {
                     </div>
 
                     <button type="submit" className="mx-auto block bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-6 rounded">Submit</button>
+                    <p className={` mt-5 mb-5 font-bold text-center border py-4 rounded-md ${status==="error" && "text-red-600 border-red-600  bg-red-200" } ${status==="sent" && "text-green-600 border-green-600  bg-green-200" }`}>
+                        {status === "sent" && "Thanks for contacting me"}
+                        {status === "error" && "Something Went wrong! try again"}
+                    </p>
                 </form>
             </div>
         </>
