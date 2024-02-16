@@ -2,22 +2,17 @@ import ContactForm from "./components/ContactForm"
 import chatapp from './assets/chatapp.png'
 import recipe from './assets/recipe.png'
 import memorygame from './assets/memorygame.png'
+import HeroSection from "./components/HeroSection"
 
 const App = () => {
   return (
     <div className="font-raleway scroll-smooth">
-      <div className="flex flex-col min-h-screen w-full items-center justify-center px-4">
-
-        <h1 className="text-2xl sm:text-3xl md:text-5xl text-center font-semibold  text-gray-700 ">Redefining Web Excellence</h1>
-        <p className="text-center mt-1 text-xs sm:text-sm md:text-xl font-semibold text-gray-500">Where Innovation Meets User Experience</p>
-        <a href="#contactme" className="mt-3">
-          <button className="font-semibold bg-gray-800 text-white rounded-[4px] sm:rounded-md px-4 sm:px-6  py-2 hover:bg-black">Get in Touch!</button>
-        </a>
-      </div>
+      <HeroSection />
+ 
       <div className="px-10">
-        <h2 className='text-center text-2xl md:text-3xl font-bold mb-4 text-gray-700'>Projects</h2>
+        <h2 className='text-center text-2xl md:text-3xl font-bold mb-4 text-gray-700 py-10'>Projects</h2>
 
-        <div className="flex gap-10 items-center flex-wrap mt-10">
+        <div className="flex gap-10 items-center flex-wrap mt-10 justify-evenly">
           <div className="w-[300px] shadow-2xl rounded-xl overflow-hidden border border-gray-400 pb-2 bg-gray-200">
 
             <img

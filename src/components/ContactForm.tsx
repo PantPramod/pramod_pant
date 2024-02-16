@@ -94,7 +94,7 @@ const ContactForm: React.FC = () => {
 
                     <button
                         type="submit"
-                        className="mx-auto bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-6 rounded w-[150px] flex items-center justify-center "
+                        className="mx-auto bg-purple-600 hover:bg-purple-900 text-white font-semibold py-2 px-6 rounded w-[150px] flex items-center justify-center "
                     >
                         {isProcessing ?
                             <div className='inline-block w-5 h-5 rounded-full border-t-2 border-r-2 border-r-white border-t-white animate-spin '>
