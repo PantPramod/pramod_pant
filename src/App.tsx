@@ -31,7 +31,7 @@ const App = () => {
               <span>   React JS, Next JS, Node JS, Express JS, Mongoose, TypeScript</span>
             </p>
             <div className="flex items-center justify-between px-2 pt-2 mt-2 mb-2">
-              <a href="https://github.com/PantPramod/artisan-creafts" target="_blank" className="text-white border-2 w-[104px] flex items-center justify-center bg-blue-600 border-blue-600 hover:scale-105 transition-all ease-in-out duration-300 p-2  rounded-full  font-semibold text-center text-xs">Source code</a>
+              <a href="https://github.com/PantPramod/artisan-crafts" target="_blank" className="text-white border-2 w-[104px] flex items-center justify-center bg-blue-600 border-blue-600 hover:scale-105 transition-all ease-in-out duration-300 p-2  rounded-full  font-semibold text-center text-xs">Source code</a>
               <a href="#" className="border-2 border-purple-600 w-[104px] flex items-center justify-center p-2 hover:scale-105 transition-all ease-in-out duration-300  rounded-full  text-white bg-purple-600 font-semibold text-right text-xs">Demo Link</a>
             </div>
           </div>
