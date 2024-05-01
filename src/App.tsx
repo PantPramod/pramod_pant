@@ -3,7 +3,9 @@ import chatapp from './assets/chatapp.png'
 import recipe from './assets/recipe.png'
 import memorygame from './assets/memorygame.png'
 import ecommerce from "./assets/ecommerce.png"
-import HeroSection from "./components/HeroSection"
+//@ts-ignore
+import HeroSection from "./components/HeroSection.jsx"
+import "./App.css"
 
 const App = () => {
   return (
