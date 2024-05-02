@@ -10,8 +10,12 @@ const HeroSection = () => {
         let gameRectangles = []
         let gameLines = []
         let gameCircles = []
+        var height = document.documentElement.scrollHeight
+
         canvas.width = window.innerWidth-20
-        canvas.height = window.innerHeight-10
+        canvas.height = height
+
+        
         
         
         function gameLoop() {
@@ -135,7 +139,7 @@ const HeroSection = () => {
         gameCircles.push(myCircle)
         
         for (let i = 0; i < 75; i++) {
-            gameCircles.push(new GameCircle(Math.random() * window.innerWidth, Math.random() * window.innerHeight, Math.random()*50, `rgba(${Math.random()*153}, ${Math.random()*153}, ${Math.random()*153}, ${Math.random()})`, Math.random()*5))
+            gameCircles.push(new GameCircle(Math.random() * window.innerWidth, Math.random() * window.innerHeight, Math.random()*50, `rgba(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255}, ${Math.random()})`, Math.random()*5))
         }
         
         // for (let i = 1; i < 4; i++) {
@@ -150,13 +154,13 @@ const HeroSection = () => {
         <canvas id="canvas"></canvas>
             <div className="min-h-screen flex flex-col sm:flex-row relative">
                 <div className=" w-full sm:w-[70%] flex items-center min-h-screen">
-                    <div className="ml-[10%]  sm:ml-[15%] mr-[10%] sm:mr-[40%]  w-auto ">
-                        <h1 className="text-[#4731d4f8] font-bold  text-5xl sm:text-6xl "> Pramod Pant </h1>
+                    <div className="ml-[10%]  sm:ml-[15%] mr-[10%] sm:mr-[40%]  w-auto  px-2 rounded-md border border border-[#4731d4]">
+                        <h1 className="text-[#c04040] font-bold  text-5xl sm:text-6xl "> Pramod Pant </h1>
                         <h2 className="text-5xl sm:text-6xl font-bold text-[#4731d4] mt-2 ">MERN Stack Developer</h2>
-                        <p className="text-[#4731d4fa] font-semibold mt-5">I like to craft solid and scalable products with great user experiences.</p>
+                        <p className="text-[#4731d4fa] font-semibold mt-5 ">I like to craft solid and scalable products with great user experiences.</p>
                     </div>
                 </div>
-                <div className="bg-[#bbd431e5] w-full sm:w-[30%] min-h-[50vh] flex justify-center items-center">
+                <div className=" w-full sm:w-[30%] min-h-[50vh] flex justify-center items-center">
                     <div className="w-[80%]  sm:w-[30%] sm:min-h-[30%] p-4 rounded-lg sm:absolute sm:left-[70%] sm:top-[50%]  border-[#010201] sm:-translate-y-1/2 sm:-translate-x-1/2 border-2">
                         <Cartoon />
                     </div>
