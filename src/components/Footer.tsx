@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <div className="bg-[#000000cc] text-gray-200 py-10 px-10 absolute bottom-0 left-0 right-0  ">
+        <div className="bg-[#000000cc] text-gray-200 py-10 px-10 ">
             <p className="py-1 text-sm">
                 <a href="mailto:pramodpant100@gmail.com">Email: pramodpant100@gmail.com</a>
             </p>
