@@ -154,10 +154,10 @@ const HeroSection = () => {
         <canvas id="canvas"></canvas>
             <div className="min-h-screen flex flex-col sm:flex-row relative">
                 <div className=" w-full sm:w-[70%] flex items-center min-h-screen">
-                    <div className="ml-[10%]  sm:ml-[15%] mr-[10%] sm:mr-[40%]  w-auto  px-2 rounded-md border border border-[#4731d4]">
-                        <h1 className="text-[#c04040] font-bold  text-5xl sm:text-6xl "> Pramod Pant </h1>
-                        <h2 className="text-5xl sm:text-6xl font-bold text-[#4731d4] mt-2 ">MERN Stack Developer</h2>
-                        <p className="text-[#4731d4fa] font-semibold mt-5 ">I like to craft solid and scalable products with great user experiences.</p>
+                    <div className="ml-[10%]  sm:ml-[15%] mr-[10%] sm:mr-[40%]  w-auto  p-5 rounded-md border-2  border-black">
+                        <h1 className="text-[#4731d4fa] font-bold  text-5xl sm:text-6xl "> Pramod Pant </h1>
+                        <h2 className="text-5xl sm:text-6xl font-bold text-black mt-2 ">MERN Stack Developer</h2>
+                        <p className="text-black font-semibold mt-5 ">I like to craft solid and scalable products with great user experiences.</p>
                     </div>
                 </div>
                 <div className=" w-full sm:w-[30%] min-h-[50vh] flex justify-center items-center">

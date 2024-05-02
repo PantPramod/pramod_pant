@@ -6,6 +6,7 @@ import ecommerce from "./assets/ecommerce.png"
 //@ts-ignore
 import HeroSection from "./components/HeroSection.jsx"
 import "./App.css"
+import Footer from "./components/Footer.js"
 
 const App = () => {
   return (
@@ -112,6 +113,7 @@ const App = () => {
         </div>
       </div>
       <ContactForm />
+      <Footer/>
     </div>
   )
 }
