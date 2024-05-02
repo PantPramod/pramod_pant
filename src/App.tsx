@@ -10,7 +10,7 @@ import Footer from "./components/Footer.js"
 
 const App = () => {
   return (
-    <div className="font-raleway scroll-smooth">
+    <div className="font-raleway scroll-smooth relative">
       <HeroSection />
 
       <div className="px-10">
