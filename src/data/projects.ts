@@ -56,7 +56,7 @@ const projects = [
         imgSrc: bubbleshooter,
         title: 'Bubble Shooter',
         technologies: "HTML,CSS , Canvas, JS ",
-        sourceCode: "hhttps://github.com/PantPramod/pramod_pant",
+        sourceCode: "https://github.com/PantPramod/pramod_pant",
         demoLink: "https://www.pramodpant.tech/bubble-shooter/"
     }
 
