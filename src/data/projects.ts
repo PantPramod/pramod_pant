@@ -4,8 +4,12 @@ import memorygame from '../assets/memorygame.png'
 import ecommerce from "../assets/ecommerce.png"
 import utility from '../assets/utility.png'
 import urlshortner from '../assets/url-shortner.png'
+import bubbleshooter from '../assets/bubble-shooter.png'
 
 const projects = [
+    {
+
+    },
     {
         imgSrc: chatapp,
         title: 'Chat app',
@@ -47,6 +51,13 @@ const projects = [
         technologies: "React JS , Firebase",
         sourceCode: "https://github.com/PantPramod/url-shortner",
         demoLink: "https://appopener.netlify.app/"
+    },
+    {
+        imgSrc: bubbleshooter,
+        title: 'Bubble Shooter',
+        technologies: "HTML,CSS , Canvas, JS ",
+        sourceCode: "hhttps://github.com/PantPramod/pramod_pant",
+        demoLink: "https://www.pramodpant.tech/bubble-shooter/"
     }
 
 ]
