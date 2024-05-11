@@ -5,22 +5,22 @@ const Projects = () => {
         <div className="px-10">
             <h2 className='text-center text-2xl md:text-3xl font-bold mb-4 text-gray-700 py-10'>Projects</h2>
 
-            <div className="flex gap-15  flex-wrap mt-10 justify-between gap-y-20 items-stretch">
+            <div className="flex sm:gap-x-[10%] md:gap-x-[5%] lg:gap-x-[2.5%] flex-wrap   gap-y-20 items-stretch">
 
                 {projects.map((project) => <div
                     key={Math.random()}
-                    className="mx-auto sm:mx-[unset] max-w-[300px] w-full sm:w-[45%] md:w-[30%] shadow-2xl rounded-xl overflow-hidden border border-gray-400 pb-2 bg-gray-200 self-stretch">
+                    className="mx-auto sm:mx-[unset] w-full sm:w-[45%] md:w-[30%] lg:w-[23%] shadow-2xl rounded-xl overflow-hidden border border-gray-400 pb-2 bg-gray-200 self-stretch">
 
                     <img
                         src={project.imgSrc}
                         alt="E Commerce App"
-                        className="border-b border-b-gray-400 min-h-[190px] object-contain"
+                        className="border-b border-b-gray-400 h-[200px] object-contain mx-auto"
                         width={300}
                         height={300}
 
                     />
                     <p className="font-bold uppercase text-center mt-2">{project.title}</p>
-                    <p className="text-gray-600 text-xs px-2 flex gap-x-2 font-bold mt-2">
+                    <p className="text-gray-600 text-xs px-2 flex gap-x-2 font-bold mt-2 min-h-[32px]">
                         <span>Technology:</span>
                         <span>   {project.technologies}</span>
                     </p>

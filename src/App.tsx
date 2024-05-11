@@ -8,7 +8,7 @@ import HeroSection from "./components/HeroSection.jsx"
 
 const App = () => {
   return (
-    <div className="font-raleway scroll-smooth relative">
+    <div className="font-raleway scroll-smooth relative max-w-[1500px] mx-auto">
       <HeroSection />
       <Projects />
       <ContactForm />
