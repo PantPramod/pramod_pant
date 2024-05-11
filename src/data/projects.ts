@@ -7,9 +7,7 @@ import urlshortner from '../assets/url-shortner.png'
 import bubbleshooter from '../assets/bubble-shooter.png'
 
 const projects = [
-    {
-
-    },
+  
     {
         imgSrc: chatapp,
         title: 'Chat app',
