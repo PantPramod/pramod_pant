@@ -1,0 +1,54 @@
+import chatapp from '../assets/chatapp.png'
+import recipe from '../assets/recipe.png'
+import memorygame from '../assets/memorygame.png'
+import ecommerce from "../assets/ecommerce.png"
+import utility from '../assets/utility.png'
+import urlshortner from '../assets/url-shortner.png'
+
+const projects = [
+    {
+        imgSrc: chatapp,
+        title: 'Chat app',
+        technologies: "React JS , Node JS, Express JS, Socket.IO, MongoDB",
+        sourceCode: "https://github.com/PantPramod/chat-app",
+        demoLink: "https://chatappbypramod.netlify.app/"
+    },
+    {
+        imgSrc: recipe,
+        title: 'Recipe Finder',
+        technologies: "Next JS, Node JS, Express JS, TypeScript, MongoDB",
+        sourceCode: "https://github.com/PantPramod/recepies-app",
+        demoLink: "https://recepies-app-theta.vercel.app/"
+    },
+    {
+        imgSrc: memorygame,
+        title: 'REALTIME MEMORY GAME',
+        technologies: "React JS, Node JS, Express JS, TypeScript, Socket.Io",
+        sourceCode: "https://github.com/PantPramod/real-time-memory-game",
+        demoLink: "https://memorygame124.netlify.app/"
+    },
+    {
+        imgSrc: ecommerce,
+        title: 'ARTISAN CRAFTS',
+        technologies: "React JS, Next JS, Node JS, Express JS, Mongoose, TypeScript",
+        sourceCode: "https://github.com/PantPramod/artisan-crafts",
+        demoLink: "#"
+    },
+    {
+        imgSrc: utility,
+        title: 'UTILITY APP',
+        technologies: "React JS , Node JS, Express JS, Puppeteer",
+        sourceCode: "https://github.com/PantPramod/utility-app",
+        demoLink: "https://utility-app-nine.vercel.app/"
+    },
+    {
+        imgSrc: urlshortner,
+        title: 'Url Shortner',
+        technologies: "React JS , Firebase",
+        sourceCode: "https://github.com/PantPramod/url-shortner",
+        demoLink: "https://appopener.netlify.app/"
+    }
+
+]
+
+export default projects
