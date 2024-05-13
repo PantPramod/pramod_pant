@@ -1,5 +1,7 @@
+import { addDoc, collection } from 'firebase/firestore';
 import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { db } from '../Firebase';
 
 interface FormData {
     name: string;
@@ -16,14 +18,15 @@ const ContactForm: React.FC = () => {
     const onSubmit: SubmitHandler<FormData> = async (data) => {
         try {
             setIsProcessing(true)
-            const response = await fetch("https://recipe-backend-8nd7.onrender.com/api/contact", {
-                method: "POST",
-                body: JSON.stringify({ ...data }),
-                headers: { "Content-Type": "application/json" }
+            const docRef = await addDoc(collection(db, "contacts"), {
+                name: data?.name
+                , email: data?.email
+                , phone: data?.contact
+                , message: data?.message
             });
-            const res = await response.json()
-            if (res?._id) {
-                setStatus("sent")
+            console.log("Document written with ID: ", docRef.id);
+            if (docRef?.id) {
+                setStatus('sent')
             }
         } catch (err) {
             console.log(err)
