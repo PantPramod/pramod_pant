@@ -5,6 +5,7 @@ import './index.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 //@ts-ignore
 import BuBbleShooter from './components/BuBbleShooter.jsx'
+import AdminPanel from './AdminPanel.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Routes>
       <Route element={<App/>} path='/'/>
       <Route element={<BuBbleShooter/>} path="/bubble-shooter"/>
+      <Route element={<AdminPanel/>} path="/admin-panel"/>
     </Routes>
     
     </BrowserRouter>
