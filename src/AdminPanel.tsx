@@ -24,7 +24,7 @@ const AdminPanel = () => {
         getAllContacts()
     }, [])
     return (
-        <div style={{ backgroundImage: "url('/src/assets/Wave.svg')" }} className="min-h-screen bg-cover">
+        <div style={{ backgroundImage: "url('./assets/Wave.svg')" }} className="min-h-screen bg-cover">
             <h2 className="text-center font-bold text-3xl p-10">All Contacts</h2>
             <div className="flex gap-x-4 w-[90%] sm:w-full max-w-[900px] mx-auto border text-sm border-gray-400 font-bold">
                 <span className="w-[100px] border-r border-r-gray-400 p-1 sm:p-4 overflow-x-auto">S.No.</span>
