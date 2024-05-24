@@ -8,16 +8,10 @@ import bubbleshooter from '../assets/bubble-shooter.png'
 
 const projects = [
   
-    {
-        imgSrc: chatapp,
-        title: 'Chat app',
-        technologies: "React JS , Node JS, Express JS, Socket.IO, MongoDB",
-        sourceCode: "https://github.com/PantPramod/chat-app",
-        demoLink: "https://chatappbypramod.netlify.app/"
-    },
+    
     {
         imgSrc: recipe,
-        title: 'Recipe Finder',
+        title: 'Recipe App',
         technologies: "Next JS, Node JS, Express JS, TypeScript, MongoDB",
         sourceCode: "https://github.com/PantPramod/recepies-app",
         demoLink: "https://recepies-app-theta.vercel.app/"
@@ -34,7 +28,7 @@ const projects = [
         title: 'ARTISAN CRAFTS',
         technologies: "React JS, Next JS, Node JS, Express JS, Mongoose, TypeScript",
         sourceCode: "https://github.com/PantPramod/artisan-crafts",
-        demoLink: "#"
+        demoLink: "https://artisan-crafts-git-main-pantpramods-projects.vercel.app/"
     },
     {
         imgSrc: utility,
@@ -56,7 +50,14 @@ const projects = [
         technologies: "HTML,CSS , Canvas, JS ",
         sourceCode: "https://github.com/PantPramod/pramod_pant",
         demoLink: "https://www.pramodpant.tech/bubble-shooter/"
-    }
+    },
+    {
+        imgSrc: chatapp,
+        title: 'Chat app',
+        technologies: "React JS , Node JS, Express JS, Socket.IO, MongoDB",
+        sourceCode: "https://github.com/PantPramod/chat-app",
+        demoLink: "https://chatappbypramod.netlify.app/"
+    },
 
 ]
 
