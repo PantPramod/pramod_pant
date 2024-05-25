@@ -5,6 +5,7 @@ import ecommerce from "../assets/ecommerce.png"
 import utility from '../assets/utility.png'
 import urlshortner from '../assets/url-shortner.png'
 import bubbleshooter from '../assets/bubble-shooter.png'
+import portfolio from '../assets/portfolio.png'
 
 const projects = [
   
@@ -57,6 +58,13 @@ const projects = [
         technologies: "React JS , Node JS, Express JS, Socket.IO, MongoDB",
         sourceCode: "https://github.com/PantPramod/chat-app",
         demoLink: "https://chatappbypramod.netlify.app/"
+    },
+    {
+        imgSrc: portfolio,
+        title: 'Pramod Portfolio',
+        technologies: "React JS , TypeScript, FireStore",
+        sourceCode: "https://github.com/PantPramod/pramod_pant",
+        demoLink: "https://pramodpant.tech/"
     },
 
 ]
