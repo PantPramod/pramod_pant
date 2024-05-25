@@ -1,23 +1,40 @@
-import codingQuestion from "../data/codingQuestion"
 
+import { ImLink } from "react-icons/im";
+import { Link } from "react-router-dom";
+let types = [
+  "string",
+  "array",
+  "object",
+  "number",
+  "function",
+  "class",
+  "output"
+  ,
+
+
+]
 const CodingProblems = () => {
+
   return (
     <div className="w-[90%] mx-auto">
       <p className="text-center text-2xl md:text-3xl font-bold mb-4 text-gray-700 py-5">Coding Questions</p>
-      <div className="py-10 ">
+      
+      <div className="">
         {
-          codingQuestion.map((item, index) => <div key={item?.que} className="mt-10">
-            <p><strong>{index + 1}.</strong>{" "}{item?.que}</p>
-            <iframe src={item.ans}
-         
-              title="JS coding question"
-              allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-              sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-              className="w-[100%] mt-5 h-[400px] rounded"
-            ></iframe>
-          </div>)
+          types.map((item, index:number) => <Link to={`${item}`} key={item} className="block capitalize text-[18px]  py-3">
+            
+            <span className="cursor-pointer hover:text-blue-600">{index+1}. {" "}{item} 
+            <ImLink 
+            size={16} 
+            className="inline-block ml-2 "
+            />
+            </span>
+            </Link>)
         }
       </div>
+
+
+     
     </div>
   )
 }

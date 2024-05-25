@@ -17,6 +17,7 @@ import {
 import './index.css'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer.tsx'
+import Questions from './pages/Questions.tsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -31,6 +32,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route element={<BubbleShooter />} path="/bubble-shooter" />
           <Route element={<AdminPanel />} path="/admin-panel" />
           <Route element={<CodingProblems />} path="/coding-problems" />
+          <Route element={<Questions />} path="/coding-problems/:id" />
           <Route element={<ContactUs />} path="/contact-us" />
           <Route element={<Blogs />} path="/blogs" />
         </Routes>
