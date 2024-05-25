@@ -39,7 +39,7 @@ const NavBar = () => {
 
           <ul                                                  //show           //not show    
             style={size !== "xs" || (showMobileMenu) ? {} : { transform: "translateX(100%)" }}
-            className=" fixed sm:relative h-[calc(100vh-80px)] sm:h-[unset] transition-all ease-in-out duration-300 right-0 sm:right-[unset] top-[calc(80px-24px)] sm:top-[unset] w-[80%] max-w-[350px] sm:w-[unset] sm:max-w-[unset] translate-x-0  flex flex-col sm:flex-row items-start sm:items-center px-10 py-8 sm:p-0 text-xl gap-y-8  gap-x-4 font-bold sm:text-sm uppercase bg-white z-[999] shadow-lg sm:shadow-none">
+            className=" fixed sm:relative h-[calc(100vh-80px)] translate-x-[100%] sm:h-[unset] transition-all ease-in-out duration-300 right-0 sm:right-[unset] top-[calc(80px-24px)] sm:top-[unset] w-[80%] max-w-[350px] sm:w-[unset] sm:max-w-[unset] flex flex-col sm:flex-row items-start sm:items-center px-10 py-8 sm:p-0 text-xl gap-y-8  gap-x-4 font-bold sm:text-sm uppercase bg-white z-[999] shadow-lg sm:shadow-none">
             <li>
               <Link
                 onClick={() => setShowMobileMenu(false)}
