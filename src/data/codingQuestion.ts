@@ -199,28 +199,17 @@ string_chop('w3resource',2)`
   },
   {
     que: " Write a JavaScript function to count substrings in a string.",
-    code: `
-    function countSubString(str, substr){
-        
-         let count = 0
-          
-         for(let i=0; i<str.length; i+=substr.length){
-            if(str.indexOf(substr, i)===-1){
-              break;
-            }
-            count++
-          }
-          return count
-    
-        }
-    
-    countSubString("The quick brown fox jumps over the lazy dog", 'the')`,
+    code: `function countSubStringOccurances(str, word){
+    return str.split(word).length - 1
+    }
+    countSubStringOccurances('aa, bb, cc, dd, aa', 'aa')
+    `,
     category: "string"
   },
   {
 
-    que:"Write a JavaScript function to get a part of a string after a specified character.",
-    code:`
+    que: "Write a JavaScript function to get a part of a string after a specified character.",
+    code: `
     function myFun(str, subStr, position="before"){
       if(position =="before"){
         return str.slice(0, str.indexOf(subStr))
@@ -231,13 +220,91 @@ string_chop('w3resource',2)`
     }
     myFun('w3resource: JavaScript Exercises', ':')
     `,
-    category:"string"
+    category: "string"
 
+  },
+  {
+    que: "Javascript Program To Check Whether Two Strings Are Anagram Of Each Other",
+    code: `
+    function checkAnagram(str1, str2){
+          if(str1.length!==str2.length){
+            return false;
+          }
+          return  str1.split('').sort().join('') === str2.split('').sort().join('')
+    }
+    checkAnagram('abc', 'cba')
+    `,
+    category: "string"
+  },
+  {
+    que: "Write a JavaScript function to truncate a string to a certain number of words.",
+    code: `
+    function truncate(str, n){
+      return str.split('').slice(0, n).join('')
+    }
+    truncate("Hello World From JS", 3)
+    
+    `,
+    category: "string"
+  },
+  {
+    que: "Write a JavaScript function to alphabetize a given string.Alphabetize string : An individual string can be alphabetized. This rearranges the letters so they are sorted A to Z.",
+    category: "string",
+    code: `function alphabetize(str){
+      return str.split('').sort().join().trim()
+    }
+    alphabetize("United States")
+    `
+  },
+  {
+    que: "Write a JavaScript function to remove the first occurrence of a given 'search string' from a string",
+    category: "string",
+    code: `function removeFirstOccurance(str, subStr){
+         return str.replace(subStr, '')
+    }
+    
+    removeFirstOccurance("the quick brown fox jumps over the lazy dog", 'the')
+    `
+  },
+  {
+    que: "Write a JavaScript function to find count of word within a string.",
+    code: `
+    function countOfWord(str, word){
+ 
+      return str.split(word).length - 1
+    }
+    countOfWord('aa, bb, cc, dd, aa', 'aa')
+
+    function myFun(str, word){
+      var regExp = new RegExp(word, "gi");
+    return (str.match(regExp) || []).length;
+    }
+    myFun('aa, bb, cc, dd, aa', 'aa')
+
+    `,
+    category: "string"
+  },
+  {
+    que: "Write a JavaScript function that checks whether a string ends with a specified suffix.",
+    code: `function isEndWithSubStr(str, subStr){
+      return  subStr===str.split('').slice(str.length-subStr.length).join("")
+    }
+    
+    isEndWithSubStr('JS PHP PYTHON','PYTHON')
+
+    function isEndsWith(str, subStr){
+      return str.indexOf(subStr, str.length - subStr.length) !== -1;
+    }
+    isEndsWith('JS PHP PYTHON','PYTHON')
+    `,
+    category: "string"
   }
 
 
 
 ]
+
+
 
 
 
