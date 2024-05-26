@@ -184,9 +184,9 @@ const codingQuestion = [
     category: "string"
   },
   {
-   que:"Write a JavaScript function to chop a string into chunks of a given length.",
-   category:"string",
-   code:`function string_chop(str, num){
+    que: "Write a JavaScript function to chop a string into chunks of a given length.",
+    category: "string",
+    code: `function string_chop(str, num){
     let arr = []
   
     for(let i = 0; i < str.length; i+=num){
@@ -195,13 +195,49 @@ const codingQuestion = [
     return arr
 }
 
-string_chop('w3resource',2)` 
+string_chop('w3resource',2)`
+  },
+  {
+    que: " Write a JavaScript function to count substrings in a string.",
+    code: `
+    function countSubString(str, substr){
+        
+         let count = 0
+          
+         for(let i=0; i<str.length; i+=substr.length){
+            if(str.indexOf(substr, i)===-1){
+              break;
+            }
+            count++
+          }
+          return count
+    
+        }
+    
+    countSubString("The quick brown fox jumps over the lazy dog", 'the')`,
+    category: "string"
+  },
+  {
+
+    que:"Write a JavaScript function to get a part of a string after a specified character.",
+    code:`
+    function myFun(str, subStr, position="before"){
+      if(position =="before"){
+        return str.slice(0, str.indexOf(subStr))
+      }else{
+        return str.slice(str.indexOf(subStr)+1)
+      }
+      
+    }
+    myFun('w3resource: JavaScript Exercises', ':')
+    `,
+    category:"string"
+
   }
 
 
 
 ]
-
 
 
 

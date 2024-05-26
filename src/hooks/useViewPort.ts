@@ -25,16 +25,16 @@ const getViewportSize = () => {
   if (typeof window !== 'undefined') {
     const width = window.innerWidth;
     if (width < 640) {
-      console.log('xs')
+      //console.log('xs')
       return 'xs';
     } else if (width < 768) {
-      console.log('sm')
+      //console.log('sm')
       return 'sm';
     } else if(width<1023){
-      console.log('md')
+      //console.log('md')
       return 'md';
     }else{
-      console.log('lg')
+      //console.log('lg')
       return 'lg';
     }
   }
