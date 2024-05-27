@@ -550,6 +550,23 @@ function twoSum(arr, target){
 twoSum([10,20,10,40,50,60,70],50)
 
     `
+  },
+  {
+    que: "Write a JavaScript function to generate an array between two integers of 1 step length.",
+    category: "array",
+    code: `
+    function rangeBetween(a,b){
+      let arr =[]
+      let start = Math.min(a,b)
+      let end = Math.max(a,b)
+      for(let i=start; i<=end; i++){
+          arr.push(i)
+      }
+     return arr
+  }
+  
+  rangeBetween(2,4)
+    `
   }
 
 ]
