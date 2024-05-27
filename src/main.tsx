@@ -18,6 +18,7 @@ import './index.css'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer.tsx'
 import Questions from './pages/Questions.tsx'
+import BlogDetails from './pages/BlogDetails.tsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -35,6 +36,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route element={<Questions />} path="/coding-problems/:id" />
           <Route element={<ContactUs />} path="/contact-us" />
           <Route element={<Blogs />} path="/blogs" />
+          <Route element={<BlogDetails />} path="/blogs/:id" />
         </Routes>
       </main>
       <Footer />

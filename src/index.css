@@ -11,3 +11,154 @@
   }
 
 
+
+  /* CSS for blog content */
+.blog {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 90%;
+  margin: auto;
+}
+
+.blog h1, .blog h2, .blog h3, .blog h4, .blog h5, .blog h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.blog h1 {
+  font-size: 2.5em;
+  border-bottom: 2px solid #bdc3c7;
+  padding-bottom: 0.3em;
+}
+
+.blog h2 {
+  font-size: 2em;
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 0.3em;
+}
+
+.blog h3 {
+  font-size: 1.75em;
+}
+
+.blog p {
+  margin-bottom: 1.5em;
+  line-height: 1.8;
+}
+
+.blog code {
+  font-family: 'Courier New', monospace;
+  /* background-color: #f1f1f1; */
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+.blog pre {
+
+  background-color: #e5ebeb;
+  /* color: #f8f8f2; */
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 5px;
+}
+
+.blog img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5em 0;
+}
+
+.blog strong {
+  font-weight: bold;
+  color: #c0392b;
+}
+
+.blog em {
+  font-style: italic;
+}
+
+.blog blockquote {
+  margin: 1.5em 0;
+  padding: 0.5em 1.5em;
+  background-color: #ecf0f1;
+  border-left: 5px solid #bdc3c7;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+.blog ul,
+.blog ol {
+  margin: 1.5em 0;
+  padding-left: 1.5em;
+}
+
+.blog ul li,
+.blog ol li {
+  margin-bottom: 0.5em;
+}
+
+.blog a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.blog a:hover {
+  text-decoration: underline;
+}
+
+.blog table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.blog table th,
+.blog table td {
+  padding: 0.75em;
+  border: 1px solid #bdc3c7;
+}
+
+.blog table th {
+  background-color: #ecf0f1;
+  text-align: left;
+}
+
+.blog ul {
+  list-style-type: disc; /* Default bullet style */
+  padding-left: 20px;    /* Space between the bullet and the text */
+  margin-bottom: 1.5em;  /* Space below the list */
+}
+
+/* Style for list items */
+.blog li {
+  margin-bottom: 0.5em;  /* Space between list items */
+}
+
+/* Optional: custom bullet style */
+.blog ul.custom-bullets {
+  list-style-type: none; /* Remove default bullets */
+}
+
+.blog ul.custom-bullets li::before {
+  content: "•";                  /* Custom bullet character */
+  color: #3498db;                /* Custom bullet color */
+  font-weight: bold;             /* Custom bullet weight */
+  display: inline-block;         /* Align with text */
+  width: 1em;                    /* Space for bullet */
+  margin-left: -1em;             /* Adjust position to align properly */
+}
+
+/* Optional: custom bullet style for nested lists */
+.blog ul.custom-bullets ul {
+  list-style-type: none;
+}
+
+.blog ul.custom-bullets ul li::before {
+  content: "◦";                  /* Custom bullet character for nested list */
+  color: #9b59b6;                /* Custom bullet color for nested list */
+}
