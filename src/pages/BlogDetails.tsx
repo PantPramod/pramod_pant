@@ -8,6 +8,9 @@ import Markdown from 'react-markdown'
 const BlogDetails = () => {
     const [result, setResult] = useState('')
     const { id } = useParams()
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const blogs = blogData.filter((blog) => blog.id === id)
     useEffect(() => {
