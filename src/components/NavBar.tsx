@@ -55,15 +55,24 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/blogs" className="hover:text-blue-700">
+              <Link 
+               onClick={() => setShowMobileMenu(false)}
+              to="/blogs" className="hover:text-blue-700">
                 Blogs
               </Link>
             </li>
             <li>
               <Link
                 onClick={() => setShowMobileMenu(false)}
+                to="/about-me" className="hover:text-blue-700">
+                About Me
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => setShowMobileMenu(false)}
                 to="/contact-us" className="hover:text-blue-700">
-                Contact Us
+                Contact 
               </Link>
             </li>
           </ul>
