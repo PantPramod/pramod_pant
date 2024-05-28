@@ -568,10 +568,119 @@ twoSum([10,20,10,40,50,60,70],50)
   rangeBetween(2,4)
     `
   },
-  
+  {
+    que: `here are two arrays with individual values. Write a JavaScript program to compute the sum of each individual index value in the given array. Sample array :
+    array1 = [1,0,2,3,4];
+    array2 = [3,5,6,7,8,13];`,
+    category: "array",
+    code: `
+    function addNumbersOfArray(arr1, arr2){
+      let arr3=[]
+      let length = Math.max(arr1.length, arr2.length) 
+      for(let i=0; i<length; i++){
+        arr3.push(arr1[i]??0+arr2[i]??0)
+      }
+      return arr3
+    }
+    
+    addNumbersOfArray([1,0,2,3,4], [3,5,6,7,8,13])`
+  },
+  {
+    que: `Write a JavaScript program to compute the union of two arrays.
+    Sample Data :
+    console.log(union([1, 2, 3], [100, 2, 1, 10]));
+    [1, 2, 3, 10, 100]`,
+    category: "array",
+    code: `function findUnion(arr1, arr2){
+      return  [...new Set( [...arr1, ...arr2])]   
+ }
+ 
+ findUnion([1, 2, 3], [100, 2, 1, 10])`
+  },
+  {
+    que: `Write a JavaScript function to fill an array with values (numeric, string with one character) within supplied bounds.
+
+    Test Data :
+    console.log(num_string_range('a', "z", 2));
+    ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]`,
+    category: "array",
+    code: `
+    function num_string_range(start, end, interval=1 ){
+      let arr=[]
+      let s = start.charCodeAt(0)
+      let e = end.charCodeAt(0)  
+      if(interval===0){
+        return "invalid Interval"
+      }
+      for(let i=s; i<e; i+=interval){
+        arr.push(String.fromCharCode(i))
+      }
+      return arr
+    }
+    
+    num_string_range('a', "z", 2)
+    `
+  },
+  {
+    que: `Write a JavaScript function to remove a specific element from an array.
+
+    Test data :
+    console.log(remove_array_element([2, 5, 9, 6], 5));`,
+    category: "array",
+    code: `
+    function removeSpecificElement(arr, element){
+      arr.splice(arr.indexOf(element), 1)
+      
+      return arr
+}
+
+removeSpecificElement([2, 5, 9, 6], 5)
+    `
+  },
+  {
+    que:`Write a JavaScript function to find an array containing a specific element.
+
+    Test data :
+    arr = [2, 5, 9, 6];
+    console.log(contains(arr, 5));
+    [True]`,
+    category:"array",
+    code:`
+    function isArrayContain(arr, element){
+      return arr.indexOf(element) !== -1
+    }
+
+    isArrayContain([1,2,3,4,5], 5)
+    `
+  },
+  {
+    que:"Write a JavaScript function to get the nth largest element from an unsorted array.",
+    category:"array",
+    code:`function findNthLargestElement(arr, element){
+        return arr.sort((a,b)=>b-a)[element-1]  
+    }
+    
+    findNthLargestElement([8,9,5,3,2,6,7], 4)
+    `
+  },
+  {
+    que:"Write a JavaScript function to create a specified number of elements with a pre-filled numeric value array.",
+    category:"array",
+    code:`
+    function generatePreFilledArray(length, element){
+      return new Array(length).fill(element)
+   }
+   generatePreFilledArray(6 , 0)
+    `
+  }
+
 
 
 ]
+
+
+
+
 
 
 
