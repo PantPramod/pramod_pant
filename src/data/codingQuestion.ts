@@ -638,14 +638,14 @@ removeSpecificElement([2, 5, 9, 6], 5)
     `
   },
   {
-    que:`Write a JavaScript function to find an array containing a specific element.
+    que: `Write a JavaScript function to find an array containing a specific element.
 
     Test data :
     arr = [2, 5, 9, 6];
     console.log(contains(arr, 5));
     [True]`,
-    category:"array",
-    code:`
+    category: "array",
+    code: `
     function isArrayContain(arr, element){
       return arr.indexOf(element) !== -1
     }
@@ -654,9 +654,9 @@ removeSpecificElement([2, 5, 9, 6], 5)
     `
   },
   {
-    que:"Write a JavaScript function to get the nth largest element from an unsorted array.",
-    category:"array",
-    code:`function findNthLargestElement(arr, element){
+    que: "Write a JavaScript function to get the nth largest element from an unsorted array.",
+    category: "array",
+    code: `function findNthLargestElement(arr, element){
         return arr.sort((a,b)=>b-a)[element-1]  
     }
     
@@ -664,14 +664,122 @@ removeSpecificElement([2, 5, 9, 6], 5)
     `
   },
   {
-    que:"Write a JavaScript function to create a specified number of elements with a pre-filled numeric value array.",
-    category:"array",
-    code:`
+    que: "Write a JavaScript function to create a specified number of elements with a pre-filled numeric value array.",
+    category: "array",
+    code: `
     function generatePreFilledArray(length, element){
       return new Array(length).fill(element)
    }
    generatePreFilledArray(6 , 0)
     `
+  },
+  {
+    que: "Write a JS Function to reverse a string",
+    category: "string",
+    code: `
+    function reverseString(str){
+       return str.split("").reverse().join("")
+    }
+    
+    reverseString("Hello World")
+    `
+  },
+  {
+    que: "Check if a string is a palindrome or not.",
+    category: "string",
+    code: `
+    function isPalindrome(str){
+        return str === str.split("").reverse().join("")
+    }
+        isPalindrome("AAbAA")
+    `
+  },
+  {
+    que: "Find the longest word in a string",
+    category: "string",
+    code: `
+    function longestWord(str){
+        let arr = str.split(" ")
+        let max = arr[0].length
+        let word = arr[0]  
+        for(let i=0; i<arr.length; i++){
+            let length = arr[i].length
+            if(length>max){
+              max=length
+              word=arr[i]
+            }   
+        }
+    return word
+    }
+
+    longestWord("Hello World in this PramodPant")
+    `
+  },
+  {
+    que:"Find the factorial of a number",
+    category:"number",
+    code:`
+    function factorial(num){
+    let factorial =1   
+    for(let i=1; i<=num; i++){
+         factorial *= i
+       }
+      return factorial   
+    }
+
+    factorial(5)
+    `
+  },
+  {
+    que:"check if a number is prime",
+    category:"number",
+    code:`
+    function isPrime(number){
+       let prime = true
+       for(let i=2; i<number; i++){
+          if(number%i===0){
+             prime = false
+             break
+             }
+          }
+       return prime
+       }
+
+    isPrime(15)
+    `
+  },
+  {
+    que:"remove duplicate characters from a string",
+    category:"string",
+    code:`
+    function removeDuplicate(str){
+             return [...new Set(str.split(""))].join("")
+    }
+             removeDuplicate("aabbccddeeffgghhiijj")
+    `
+  },
+  {
+    que:"Find the largest element in an array",
+    category:"array",
+    code:`
+     function findLargest(arr){
+       return Math.max(...arr)
+     
+     }
+       findLargest([1,2,3,4,5,6,7,8])
+    `
+  },
+  {
+    que:"Flatten a nested Array",
+    category:"array",
+    code:`
+    function flatten(arr){
+      return arr.flat(Infinity)
+    }
+
+    flatter([1,2,3,[1,2,3,1,2,3,[1,2,3]]])
+    `
+
   }
 
 
