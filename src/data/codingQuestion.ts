@@ -777,7 +777,7 @@ removeSpecificElement([2, 5, 9, 6], 5)
       return arr.flat(Infinity)
     }
 
-    flatter([1,2,3,[1,2,3,1,2,3,[1,2,3]]])
+    flatten([1,2,3,[1,2,3,1,2,3,[1,2,3]]])
     `
 
   }
