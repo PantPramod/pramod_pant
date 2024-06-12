@@ -55,6 +55,13 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
+              <Link
+                onClick={() => setShowMobileMenu(false)}
+                to="/gaming-zone" className="hover:text-blue-700">
+                Games
+              </Link>
+            </li>
+            <li>
               <Link 
                onClick={() => setShowMobileMenu(false)}
               to="/blogs" className="hover:text-blue-700">
