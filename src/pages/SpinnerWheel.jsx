@@ -112,7 +112,7 @@ let count = 0
           div.classList.add("popup");
           div.id = "popup";
           div.innerHTML = `You get ${value}`;
-          document.body.appendChild(div);
+          document.getElementById('spinner').appendChild(div);
   
           const button = document.createElement("button");
           button.classList.add("button");
